@@ -1,0 +1,6 @@
+
+State Machine - |top|system:the_system|hist_system:hist_system|histogram_std_ic_partition_wrapper:histogram_std_ic_inst|histogram_top_wrapper_0:histogram_inst_0|histogram_function_wrapper:kernel|acl_embedded_workgroup_issuer_dspba:theembedded_issuer|acl_embedded_workgroup_issuer:issuer_core|acl_embedded_workgroup_issuer_complex:issuer|present_state
+Name present_state.wg_STATE_NEW present_state.wg_STATE_WAIT present_state.wg_STATE_ISSUE 
+present_state.wg_STATE_NEW 0 0 0 
+present_state.wg_STATE_ISSUE 1 0 1 
+present_state.wg_STATE_WAIT 1 1 0 

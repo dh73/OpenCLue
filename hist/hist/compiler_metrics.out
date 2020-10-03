@@ -1,0 +1,4 @@
+histogram,target_fmax,200
+histogram,histogram.B1,II,0
+histogram,histogram.B3,II,0
+histogram,histogram.B5,II,0

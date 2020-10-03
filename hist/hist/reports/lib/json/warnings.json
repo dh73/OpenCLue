@@ -1,0 +1,4 @@
+{"rows":[
+{"name":"Kernel histogram has barrier(s), but no 'reqd_work_group_size' or 'max_work_group_..."
+,"details":["Compiler Warning: Kernel histogram has barrier(s), but no 'reqd_work_group_size' or 'max_work_group_size' attribute. Inferring a default max_work_group_size of 256. If you require a larger work-group, specify using kernel attribute."]}
+]}

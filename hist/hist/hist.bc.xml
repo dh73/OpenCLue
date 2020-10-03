@@ -1,0 +1,180 @@
+<KERNEL_LIST>
+	<PROGRAM_GLOBAL_MEM_SIZE value="0" />
+	<KERNEL_BUNDLE name="histogram" compute_units="1">
+	<KERNEL name="histogram" filename="kernel_hdl/histogram/histogram_function_wrapper.vhd" version="1" cosim_name="histogram" enable_global_profiling="1" workgroup_invariant="0" has_global_atomics="1" num_vector_lanes="1" num_profiling_signals="0" arbitration_latency="5" kernel_side_mem_latency="6">
+		<RESOURCE_INFO>
+			<ID value="0" />
+			<LOCAL_MEM aspace="5" begin="0" next="8192" banks="1" width="32" static_demand="1024" num_groups="1" has_atomics="1" ports="4" write_ports="4" rdw_mode="0" repl_fac="1" ic_req_latency="0" ic_rrp_latency="0" ic_wrp_latency="0" req_pipe_interval="0" ret_fanout="0" num_ports_per_phys_mem="4" phys_mem_latency="4" maximum_depth="0" enable="0" ram_mode="1" preferred_width="160" use_mif_file="0">
+				<BANK id="0">
+					<PORT id="0" register="0" />
+					<PORT id="1" register="0" />
+					<PORT id="2" register="0" />
+					<PORT id="3" register="0" />
+				</BANK>
+			</LOCAL_MEM>
+			<AGGREGATE_STATIC_LOCAL_MEM_SIZE value="1024" />
+			<MAX_WORK_GROUP_SIZE value="256" />
+			<REQUIRED_WORK_GROUP_SIZE x="0" y="0" z="0" />
+		</RESOURCE_INFO>
+		<CONFIGURATION>
+			<INTERFACE port="clock_reset" type="clock"/>
+			<INTERFACE port="cra_irq" type="irq"/>
+			<INTERFACE port="cra" type="slave" cosim_name="" width="64" size="128" latency="0" />
+		</CONFIGURATION>
+		<REQUIREMENTS>
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/linux64/lib/dspba/Libraries/vhdl/base/dspba_library_package.vhd" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/linux64/lib/dspba/Libraries/vhdl/base/dspba_library.vhd" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_data_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ll_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ll_ram_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_valid_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_dspba_valid_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_staging_reg.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_fifo_zero_width.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_high_speed_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_low_latency_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_zero_latency_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fanout_pipeline.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_std_synchronizer_nocut.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_decr_threshold.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_lookahead.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_reset_handler.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_lfsr.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_work_group_limiter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_work_group_limiter_dspba.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_top.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_permute_address.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_pipelined.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_enabled.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_basic_coalescer.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_simple.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_streaming.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_master.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_bursting_load_stores.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_non_aligned_write.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_read_cache.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_atomic.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_prefetch_block.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_wide_wrapper.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_streaming_prefetch.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_aligned_burst_coalesced_lsu.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_toggle_detect.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_debug_mem.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_coalesced_pipelined_write.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_coalesced_pipelined_read.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fifo_stall_valid_lookahead.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_dspba_buffer.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_barrier.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fifo_reorder.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_full_detector.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_loop_limiter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_clock2x_holder.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_embedded_workgroup_issuer_dspba.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_embedded_workgroup_issuer.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_embedded_workgroup_issuer_complex.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_embedded_workgroup_issuer_fifo.v" />
+			<FILE name="kernel_hdl/histogram/histogram_function_wrapper.vhd" />
+			<FILE name="kernel_hdl/histogram/histogram_function.vhd" />
+			<FILE name="kernel_hdl/histogram/bb_histogram_B1_sr_0.vhd" />
+			<FILE name="kernel_hdl/histogram/bb_histogram_B1_sr_1.vhd" />
+			<FILE name="kernel_hdl/histogram/bb_histogram_B2_sr_0.vhd" />
+			<FILE name="kernel_hdl/histogram/bb_histogram_B3_sr_0.vhd" />
+			<FILE name="kernel_hdl/histogram/bb_histogram_B3_sr_1.vhd" />
+			<FILE name="kernel_hdl/histogram/bb_histogram_B4_sr_0.vhd" />
+			<FILE name="kernel_hdl/histogram/bb_histogram_B5_sr_0.vhd" />
+			<FILE name="kernel_hdl/histogram/bb_histogram_B5_sr_1.vhd" />
+			<FILE name="kernel_hdl/histogram/bb_histogram_B6_sr_0.vhd" />
+			<FILE name="kernel_hdl/histogram/bb_histogram_B0.vhd" />
+			<FILE name="kernel_hdl/histogram/bb_histogram_B0_stall_region.vhd" />
+			<FILE name="kernel_hdl/histogram/histogram_B0_merge_reg.vhd" />
+			<FILE name="kernel_hdl/histogram/i_acl_wg_limiter_enter_l_grpid_0_histogram0.vhd" />
+			<FILE name="kernel_hdl/histogram/histogram_B0_branch.vhd" />
+			<FILE name="kernel_hdl/histogram/histogram_B0_merge.vhd" />
+			<FILE name="kernel_hdl/histogram/bb_histogram_B1.vhd" />
+			<FILE name="kernel_hdl/histogram/bb_histogram_B1_stall_region.vhd" />
+			<FILE name="kernel_hdl/histogram/histogram_B1_merge_reg.vhd" />
+			<FILE name="kernel_hdl/histogram/i_store_unnamed_histogram0_histogram5.vhd" />
+			<FILE name="kernel_hdl/histogram/i_syncbuf_local_size_0_sync_buffer2_histogram7.vhd" />
+			<FILE name="kernel_hdl/histogram/histogram_B1_branch.vhd" />
+			<FILE name="kernel_hdl/histogram/histogram_B1_merge.vhd" />
+			<FILE name="kernel_hdl/histogram/bb_histogram_B2.vhd" />
+			<FILE name="kernel_hdl/histogram/bb_histogram_B2_stall_region.vhd" />
+			<FILE name="kernel_hdl/histogram/i_rbar_unnamed_histogram1_histogram10.vhd" />
+			<FILE name="kernel_hdl/histogram/histogram_B2_branch.vhd" />
+			<FILE name="kernel_hdl/histogram/histogram_B2_merge.vhd" />
+			<FILE name="kernel_hdl/histogram/bb_histogram_B3.vhd" />
+			<FILE name="kernel_hdl/histogram/bb_histogram_B3_stall_region.vhd" />
+			<FILE name="kernel_hdl/histogram/histogram_B3_merge_reg.vhd" />
+			<FILE name="kernel_hdl/histogram/i_load_unnamed_histogram3_histogram18.vhd" />
+			<FILE name="kernel_hdl/histogram/readdata_reg_unnamed_histogram3_histogram0.vhd" />
+			<FILE name="kernel_hdl/histogram/i_syncbuf_data_sync_buffer_histogram12.vhd" />
+			<FILE name="kernel_hdl/histogram/i_syncbuf_global_size_0_sync_buffer_histogram23.vhd" />
+			<FILE name="kernel_hdl/histogram/i_syncbuf_numdata_sync_buffer1_histogram25.vhd" />
+			<FILE name="kernel_hdl/histogram/i_syncbuf_numdata_sync_buffer_histogram15.vhd" />
+			<FILE name="kernel_hdl/histogram/i_unknown_call1819_histogram21.vhd" />
+			<FILE name="kernel_hdl/histogram/readdata_reg_call1819_histogram1.vhd" />
+			<FILE name="kernel_hdl/histogram/histogram_B3_branch.vhd" />
+			<FILE name="kernel_hdl/histogram/histogram_B3_merge.vhd" />
+			<FILE name="kernel_hdl/histogram/bb_histogram_B4.vhd" />
+			<FILE name="kernel_hdl/histogram/bb_histogram_B4_stall_region.vhd" />
+			<FILE name="kernel_hdl/histogram/i_rbar_unnamed_histogram4_histogram29.vhd" />
+			<FILE name="kernel_hdl/histogram/histogram_B4_branch.vhd" />
+			<FILE name="kernel_hdl/histogram/histogram_B4_merge.vhd" />
+			<FILE name="kernel_hdl/histogram/bb_histogram_B5.vhd" />
+			<FILE name="kernel_hdl/histogram/bb_histogram_B5_stall_region.vhd" />
+			<FILE name="kernel_hdl/histogram/histogram_B5_merge_reg.vhd" />
+			<FILE name="kernel_hdl/histogram/i_sfc_c0_for_body31_histogram_c0_enter_histogram.vhd" />
+			<FILE name="kernel_hdl/histogram/i_acl_sfc_exit_c0_for_body31_histogram_cA0Zexit_histogram44.vhd" />
+			<FILE name="kernel_hdl/histogram/i_acl_sfc_exit_c0_for_body31_histogram_cA0Zgram48_data_fifo.vhd" />
+			<FILE name="kernel_hdl/histogram/i_acl_sfc_exit_c0_for_body31_histogram_cA0Zam_full_detector.vhd" />
+			<FILE name="kernel_hdl/histogram/i_sfc_logic_c0_for_body31_histogram_c0_eA0Znter_histogram31.vhd" />
+			<FILE name="kernel_hdl/histogram/i_load_unnamed_histogram5_histogram38.vhd" />
+			<FILE name="kernel_hdl/histogram/i_syncbuf_histogram_sync_buffer_histogram33.vhd" />
+			<FILE name="kernel_hdl/histogram/i_syncbuf_local_size_0_sync_buffer_histogram40.vhd" />
+			<FILE name="kernel_hdl/histogram/i_unknown_call36_histogram45.vhd" />
+			<FILE name="kernel_hdl/histogram/readdata_reg_call36_histogram3.vhd" />
+			<FILE name="kernel_hdl/histogram/histogram_B5_branch.vhd" />
+			<FILE name="kernel_hdl/histogram/histogram_B5_merge.vhd" />
+			<FILE name="kernel_hdl/histogram/bb_histogram_B6.vhd" />
+			<FILE name="kernel_hdl/histogram/bb_histogram_B6_stall_region.vhd" />
+			<FILE name="kernel_hdl/histogram/i_acl_wg_limiter_exit_unnamed_histogram6_histogram47.vhd" />
+			<FILE name="kernel_hdl/histogram/wgl_exit_storage.vhd" />
+			<FILE name="kernel_hdl/histogram/histogram_B6_branch.vhd" />
+			<FILE name="kernel_hdl/histogram/histogram_B6_merge.vhd" />
+			<FILE name="kernel_hdl/histogram/loop_limiter_histogram0.vhd" />
+			<FILE name="kernel_hdl/histogram/loop_limiter_histogram1.vhd" />
+			<FILE name="kernel_hdl/histogram/loop_limiter_histogram2.vhd" />
+			<FILE name="kernel_hdl/histogram/histogram_function_cra_slave.vhd" />
+		</REQUIREMENTS>
+		<DATA>
+			<INTERFACE port="call36" cosim_name="" type="master" width="256" true_lsu_width="32" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="1" optype="read" criticality="1048576" buffer_location="" group_id="0" />
+			<INTERFACE port="unnamed_histogram3" cosim_name="" type="master" width="256" true_lsu_width="32" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="1" optype="read" criticality="1048576" buffer_location="" group_id="0" />
+			<INTERFACE port="call1819" cosim_name="" type="master" width="128" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="5" optype="read" criticality="1048576" buffer_location="" group_id="0" >
+				<CONNECTION port="3" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="unnamed_histogram0" cosim_name="" type="master" width="128" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="5" optype="write" criticality="1048576" buffer_location="" group_id="0" >
+				<CONNECTION port="0" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="unnamed_histogram5" cosim_name="" type="master" width="128" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="5" optype="read" criticality="1048576" buffer_location="" group_id="0" >
+				<CONNECTION port="1" bank="-1" />
+			</INTERFACE>
+		</DATA>
+		<KERNEL_ARGS>
+			<ARGUMENT name="data" cosim_name="" opencl_access_type="ACL_ARG_ADDR_GLOBAL" opencl_type_category="ACL_ARG_MEM_OBJ" size="8" type_qualifier="R" access_qualifier="ARG_ACCESS_NONE" type_name="int*" >
+		</ARGUMENT>
+			<ARGUMENT name="histogram" cosim_name="" opencl_access_type="ACL_ARG_ADDR_GLOBAL" opencl_type_category="ACL_ARG_MEM_OBJ" size="8" type_qualifier="R" access_qualifier="ARG_ACCESS_NONE" type_name="int*" >
+		</ARGUMENT>
+			<ARGUMENT name="numData" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="4" type_qualifier="ARG_TYPE_NONE" access_qualifier="ARG_ACCESS_NONE" type_name="int" >
+		</ARGUMENT>
+		</KERNEL_ARGS>
+		<PRINTF_FORMAT_STRINGS>
+		</PRINTF_FORMAT_STRINGS>
+		<PRINTF_INTERFACES>
+		</PRINTF_INTERFACES>
+	</KERNEL>
+	</KERNEL_BUNDLE>
+	<STRUCT_TYPE_DEFS>
+	</STRUCT_TYPE_DEFS>
+</KERNEL_LIST>

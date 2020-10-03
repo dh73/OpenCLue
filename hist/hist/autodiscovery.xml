@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<board name="de10_nano_sharedonly" vfabric="0" big_endian="0">
+	 <global_mem_config name="" mode="burst-interleaved"/> 
+	<kernel name="histogram" csr_addr="0" csr_size="128" work_group_invariant="0" vector_lanes="1" >
+		<work_group size_x="0" size_y="0" size_z="0" max_size="256"/>
+			<argument index="0" type="2" category="1" size="8" >
+			</argument>
+			<argument index="1" type="2" category="1" size="8" >
+			</argument>
+			<argument index="2" type="0" category="0" size="4" >
+			</argument>
+		<local_memory id="5" local_demand="1024"/>
+	</kernel>
+</board>
