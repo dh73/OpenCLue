@@ -26,7 +26,7 @@ void print_vector (std::vector<T> &v)
     std::cout << std::endl;
 }
 
-int main () 
+int main ()
 {
     // Input values to run the matrix multiplication
     std::vector<double> dot {0.0, 3.0, 6.0, 9.0};
@@ -44,16 +44,15 @@ int main ()
     // To show the actual values
     std::cout << "*** Vector:  ***\n";
     print_vector<double> (dot);
-    
+
     // This for the matrix
     std::cout << "** Matrix: ***\n";
     print_array<double> (m);
-
     // Execute the computation
     for (auto i = 0; i < HEIGTH; i++) {
         val = 0;
         for (auto j = 0; j < WIDTH; j++) {
-            val += m[i][j] * dot[j];
+	    val += m[i][j] * dot[j];
         }
         result.push_back(val);
     }

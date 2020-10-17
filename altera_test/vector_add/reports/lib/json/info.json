@@ -1,8 +1,0 @@
-{"name":"Info","rows":[
-{"name":"Project Name","data":["hello_world"],"classes":["info-table"]},
-{"name":"Target Family, Device, Board","data":["Cyclone V, 5CSXFC6D6F31C8ES, de10_nano:de10_nano_sharedonly"]},
-{"name":"AOC Version","data":["18.1.0 Build 625"]},
-{"name":"Quartus Version","data":["18.1.0 Build 625"]},
-{"name":"Command","data":["aoc hello_world.cl -o vector_add.aocx --report"]},
-{"name":"Reports Generated At", "data":["Tue Sep 15 23:17:36 2020"]}
-]}
